@@ -1,26 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import "../Styles/header.css";
+import "../Styles/headerlogedin.css";
 import threedots from "../Images/icons8-menu-vertical-50.png";
 
-const Header = () => {
+const Headerloggedin = () => {
   const location = useLocation();
   const navigate = useNavigate();
+  const isMainMenu = location.pathname === "/";
+  const { usernamejobseek } = useParams();
 
-  const isMainMenu = location.pathname === "/"; // Check if on the main menu page
-  const userRole = sessionStorage.getItem("userRole");
+  const [dropdownVisible, setDropdownVisible] = useState(false);
+
+  const toggleDropdown = () => {
+    setDropdownVisible(!dropdownVisible);
+  };
 
   const goToProfile = () => {
-    const usernameEmployer = sessionStorage.getItem("usernameEmployer");
-    const jobseekUsername = sessionStorage.getItem("jobseekUsername");
-
-    if (userRole === "employer" && usernameEmployer) {
-      navigate(`/employerpp/${usernameEmployer}`);
-    } else if (userRole === "jobseeker" && jobseekUsername) {
-      navigate(`/jobseekerpp/${jobseekUsername}`);
+    const usernamejobseek = sessionStorage.getItem("usernamejobseek");
+    if (usernamejobseek) {
+      navigate(`/jobseekerpp/${usernamejobseek}`);
     } else {
-      console.error("Invalid user role or username in sessionStorage");
+      console.error("Username not found in sessionStorage");
     }
   };
 
@@ -58,26 +60,28 @@ const Header = () => {
             <li>
               <a href="/loginemp">Employers</a>
             </li>
-            {userRole && (
-              <li>
+            <li>
+              {sessionStorage.getItem("usernamejobseek") && (
                 <div className="dropdown-container">
                   <img
                     src={threedots}
                     alt="Three Dots"
                     className="threedots-image"
-                    onClick={() => goToProfile()}
+                    onClick={toggleDropdown}
                   />
-                  <div className="dropdown-content">
-                    <a href="#" onClick={() => goToProfile()}>
-                      My Profile
-                    </a>
-                    <a href="#" onClick={() => logout()}>
-                      Logout
-                    </a>
-                  </div>
+                  {dropdownVisible && (
+                    <div className="dropdown-content">
+                      <a href="#" onClick={goToProfile}>
+                        My Profile
+                      </a>
+                      <a href="#" onClick={logout}>
+                        Logout
+                      </a>
+                    </div>
+                  )}
                 </div>
-              </li>
-            )}
+              )}
+            </li>
           </ul>
         </nav>
       </div>
@@ -85,4 +89,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Headerloggedin;
