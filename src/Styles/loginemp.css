@@ -21,7 +21,7 @@
   margin-top: -20px;
   margin-bottom: 35px;
 }
-.para2 {
+.para2-1 {
   color: #000;
   font-family: Manrope;
   font-size: 17px;
@@ -57,7 +57,7 @@
 .right1 {
   display: inline-block;
 }
-.parabox {
+.parabox-1 {
   margin-top: -30px;
 }
 .left1 {
@@ -148,7 +148,7 @@
     margin-bottom: 35px;
     display: none;
   }
-  .para2 {
+  .para2-1 {
     color: #000;
     font-family: Manrope;
     font-size: 17px;
@@ -185,15 +185,15 @@
   .right1 {
     display: inline-block;
   }
-  .parabox {
-    margin-top: 50px;
+  .parabox-1 {
+    margin-top: 23px;
   }
   .left1 {
     margin-top: 0px;
     margin-left: 0px;
   }
   .right1 {
-    margin-left: 00px;
+    margin-left: 10px !important;
     text-align: left;
     margin-top: 20px;
   }
@@ -204,6 +204,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    margin-top: 0px;
   }
   .left1 button {
     width: 70px;
@@ -233,13 +234,16 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin-top: 28px;
+    margin-top: 60px;
     transition: background-color 0.3s ease;
     padding-top: 5px;
     padding-bottom: 5px;
   }
   .right1 button:hover {
     background-color: #235a91;
+  }
+  .right1-1h3 {
+    margin-top: 0px !important;
   }
   .username {
     margin-top: -5px;
@@ -250,5 +254,8 @@
     height: 600px;
   }
   .job-back {
+  }
+  .right-1h3 {
+    font-size: 20px !important;
   }
 }

@@ -82,3 +82,96 @@
   max-width: 300px;
   height: 140px;
 }
+@media only screen and (max-width: 768px) {
+  .headerfeature1 {
+    display: flex;
+    height: 60px !important;
+  }
+
+  .headerfeature1 h2 {
+    color: #fff;
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 115.1%;
+    max-width: 330px;
+    height: 29px;
+    text-decoration: none;
+  }
+  .headerfeature1 {
+    background: linear-gradient(96deg, #0c09aa 2.04%, #3c39d4 88.4%);
+    height: 115px;
+  }
+  .featured {
+  }
+  .viewall1 {
+    margin-left: -480px;
+    margin-top: 20px;
+    width: 100px !important;
+    min-width: 20px;
+  }
+  .viewall1 a {
+    margin-left: 00px;
+    margin-top: 25px;
+    height: 20px;
+    width: 100px !important;
+    font-size: 20px;
+  }
+  .viewall1 h2 {
+    margin-left: 20px;
+  }
+  .featured-employers {
+    margin-left: -200px;
+    margin-top: 25px;
+  }
+  .headerfeature1 a {
+    text-decoration: none;
+  }
+  .big-box-22 {
+    display: grid;
+    grid-template-columns: repeat(
+      3,
+      minmax(0, 1fr)
+    ); /* Two columns with equal width */
+    grid-gap: 20px; /* Adjust the gap between the boxes as needed */
+    margin: 0 auto; /* Center the container on the page */
+    margin-top: 20px;
+  }
+
+  .box-22 {
+    /* Each box takes up the full width of its container */
+    max-width: 80px; /* Set the maximum width for each box */
+    margin: 0 auto; /* Center the box within its container */
+    height: 140px;
+    border: 3px solid #0c09aa;
+    background: #fff;
+    padding: 20px; /* Add padding for better visual appearance */
+  }
+
+  .box-22-p1 {
+    color: #356ae6;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 115.1%; /* 28.775px */
+  }
+
+  .box-22-p2 {
+    color: #d9d9d9;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 115.1%; /* 28.775px */
+  }
+
+  .box-22 img {
+    max-width: 80px;
+    height: 80px;
+  }
+}

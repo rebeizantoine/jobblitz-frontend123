@@ -10,7 +10,7 @@
 }
 
 .certify-image {
-  margin-left: -1420px;
+  margin-left: -1050px;
 }
 
 .footer-start p {
@@ -30,7 +30,7 @@
   display: flex;
   justify-content: space-evenly;
   width: 150px !important;
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
 .vertical-line {
@@ -58,10 +58,10 @@
   line-height: normal;
   text-transform: capitalize;
   margin-left: 170px;
-  margin-left: -180px;
+  margin-left: -0px;
 }
 .quick-links {
-  margin-top: -250px;
+  margin-top: -225px;
 }
 
 .quick-links-ul a {
@@ -97,7 +97,7 @@ li ::marker {
   font-weight: 700;
   line-height: normal;
   text-transform: capitalize;
-  margin-top: -28px;
+  margin-top: 08px;
 }
 .phone-footer {
   color: #fff;
@@ -131,9 +131,159 @@ li ::marker {
   font-family: Manrope;
   font-size: 14px;
   font-weight: 500;
-  margin-top: -38px;
+  margin-top: -48px;
 }
 .socials img {
   width: 43px;
   height: 43px;
+}
+
+@media only screen and (max-width: 768px) {
+  .certify {
+    height: 500px;
+    background-image: url("../Images/Subtract.png");
+    background-size: cover;
+  }
+
+  .footer-start {
+    padding-top: 50px;
+    margin-left: 6%; /* Adjust margin as needed */
+  }
+
+  .certify-image {
+    margin-top: 40px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+  }
+
+  .footer-start p {
+    width: 350px;
+    color: #fff;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-left: 0; /* Set margin-left to 0 to start from the left */
+    text-align: left; /* Align the text to the left */
+  }
+
+  .socials {
+    display: flex;
+    justify-content: space-evenly;
+    width: 150px !important;
+    margin-top: 10px;
+    margin-left: 90px;
+  }
+
+  .vertical-line {
+    margin-top: -380px;
+    margin-bottom: 30px;
+    display: none;
+  }
+  .quick-links-ul li {
+    color: #fff;
+    font-family: Manrope;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .quick-links-h3 {
+    color: #fff;
+    font-family: Manrope;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-left: 170px;
+    margin-left: -0px;
+    display: none;
+  }
+  .quick-links {
+    margin-top: -225px;
+  }
+
+  .quick-links-ul a {
+    text-decoration: none;
+    margin-left: 680px;
+    margin-top: -100px !important;
+  }
+  .quick-links-ul {
+    list-style-type: none; /* Remove default list item markers (dots) */
+    padding: 0;
+    margin-top: -200px;
+    display: none;
+  }
+
+  .quick-links-ul li {
+    color: #fff;
+    font-family: Manrope;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  li ::marker {
+    display: none;
+  }
+  .contact-us-footer h3 {
+    color: #fff;
+    font-family: Manrope;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-top: 5 8px;
+  }
+  .phone-footer {
+    color: #fff;
+    font-family: Manrope;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-bottom: 0px;
+    margin-top: -10px !important;
+  }
+
+  .email-footer {
+    color: #fff;
+    font-family: Manrope;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-bottom: 0px; /* Add margin-bottom for spacing */
+  }
+  .contact-us-footer {
+    margin-left: 00px;
+    margin-top: 225px;
+  }
+  .jobblitz-copyright {
+    text-align: center;
+    margin-top: 20px;
+    color: #fff;
+    font-family: Manrope;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 08px;
+  }
+  .socials img {
+    width: 43px;
+    height: 43px;
+  }
 }

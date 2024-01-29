@@ -194,10 +194,13 @@ const Employerpp = () => {
 
       <div className="highest-box-1">
         <div className="image-highest">
-          <img src={topimage} alt="" />
+          <div className="circular-avatar">
+            <span>{employerData.firstnameEmployer.charAt(0)}</span>
+            <span>{employerData.lastnameEmployer.charAt(0)}</span>
+          </div>
         </div>
         <div className="profilething">
-          <h2>{`${employerData.firstnameEmployer} ${employerData.lastnameEmployer}`}</h2>
+          <h2 className="profilethingh2">{`${employerData.firstnameEmployer} ${employerData.lastnameEmployer}`}</h2>
           <div className="info-box">
             <div className="info-item1">
               <div className="pergunta">
@@ -665,7 +668,7 @@ const Employerpp = () => {
               <div className="handledelete-img">
                 <img
                   src={deleteimage}
-                  onClick={handleDeleteJobDescription}
+                  onClick={() => handleDeleteJobDescription(job._id)}
                   alt=""
                   className=""
                 />

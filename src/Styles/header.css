@@ -59,3 +59,67 @@ a {
 .dropdown-container:hover .dropdown-content {
   display: block;
 }
+
+@media only screen and (max-width: 768px) {
+  .header-ul {
+    list-style-type: none;
+    padding: 0;
+    margin-left: 0px;
+    margin-right: 0px;
+    display: flex;
+    justify-content: space-between;
+    font-family: Manrope;
+    font-size: 10px;
+  }
+  .header-ul li,
+  a {
+    color: #fff;
+    font-family: Manrope;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 155px;
+    margin-top: 2.5%;
+    text-decoration: none;
+  }
+  .header1 {
+    height: 80px;
+    background-color: #0c09aa;
+  }
+  /* Add these styles to your CSS file */
+
+  .threedots-image {
+    cursor: pointer;
+    margin-top: -8px;
+  }
+
+  .dropdown-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+
+  .dropdown-container:hover .dropdown-content {
+    display: block;
+  }
+}

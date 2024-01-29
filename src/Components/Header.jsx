@@ -13,12 +13,12 @@ const Header = () => {
 
   const goToProfile = () => {
     const usernameEmployer = sessionStorage.getItem("usernameEmployer");
-    const jobseekUsername = sessionStorage.getItem("jobseekUsername");
+    const usernamejobseek = sessionStorage.getItem("usernamejobseek");
 
     if (userRole === "employer" && usernameEmployer) {
       navigate(`/employerpp/${usernameEmployer}`);
-    } else if (userRole === "jobseeker" && jobseekUsername) {
-      navigate(`/jobseekerpp/${jobseekUsername}`);
+    } else if (userRole === "jobseeker" && usernamejobseek) {
+      navigate(`/jobseekerpp/${usernamejobseek}`);
     } else {
       console.error("Invalid user role or username in sessionStorage");
     }

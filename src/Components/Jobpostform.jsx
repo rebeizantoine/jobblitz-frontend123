@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
@@ -7,7 +7,7 @@ import "../Styles/jobpostform.css";
 
 const JobPostForm = () => {
   const navigate = useNavigate();
-  const { usernameEmployer } = useParams();
+  const { usernameEmployer: urlUsernameEmployer } = useParams();
 
   const [wordCounts, setWordCounts] = useState({
     joboverview: 65,
@@ -15,8 +15,11 @@ const JobPostForm = () => {
     qualifications: 20,
   });
 
+  const storedUsernameEmployer = sessionStorage.getItem("usernameEmployer");
+  const usernameEmployer = storedUsernameEmployer || urlUsernameEmployer;
+
   const [formData, setFormData] = useState({
-    usernameEmployer: "usernameEmployer",
+    usernameEmployer: usernameEmployer,
     jobtitle: "",
     companyname: "",
     location: "",
@@ -30,14 +33,18 @@ const JobPostForm = () => {
     qualification2: "",
     qualification3: "",
     qualification4: "",
-    employementtype: "Full Time Employee",
-    monthlysalary1: 4000,
-    monthlysalary2: 5500,
-    numberofvacancies: 2,
-    degreerequired:
-      "Bachelor’s degree in Human Resources, Business, or related field",
+    employementtype: "",
+    monthlysalary1: 0,
+    monthlysalary2: 0,
+    numberofvacancies: 0,
+    degreerequired: "",
     categoryName: "",
   });
+
+  useEffect(() => {
+    sessionStorage.setItem("usernameEmployer", usernameEmployer);
+  }, [usernameEmployer]);
+
   const categories = [
     "IT Jobs",
     "Engineering",
@@ -55,15 +62,12 @@ const JobPostForm = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-
-    // Define the maximum number of words for each field
     const maxWords = {
       joboverview: 65,
       responsibilities: 15,
       qualifications: 20,
     };
 
-    // Truncate the input value based on the maximum number of words
     const truncatedValue = value.split(" ").slice(0, maxWords[name]).join(" ");
 
     setFormData((prevData) => ({
@@ -71,7 +75,6 @@ const JobPostForm = () => {
       [name]: truncatedValue,
     }));
 
-    // Update word count
     const remainingWords = maxWords[name] - truncatedValue.split(" ").length;
     setWordCounts((prevCounts) => ({ ...prevCounts, [name]: remainingWords }));
   };
@@ -84,15 +87,12 @@ const JobPostForm = () => {
         formData
       );
       toast.success("Job post added successfully!");
-      // Handle successful submission (e.g., show a success message or redirect)
-      navigate(`/jobdescriptiontrial/${formData.usernameEmployer}`);
+      navigate(`/employerpp/${usernameEmployer}`);
     } catch (error) {
       console.error("Error adding job post:", error);
       toast.error("Error adding job post. Please try again.");
-      // Handle error (e.g., show an error message)
     }
   };
-
   return (
     <div className="job-post-form">
       <h2>Add a Job Post</h2>
@@ -312,15 +312,15 @@ const JobPostForm = () => {
         </div>
 
         <div className="form-group">
-          <label className="label123" htmlFor="degreeRequired">
+          <label className="label123" htmlFor="degreerequired">
             Degree Required
           </label>
           <input
             className="input-post-123"
             type="text"
-            id="degreeRequired"
-            name="degreeRequired"
-            value={formData.degreeRequired}
+            id="degreerequired"
+            name="degreerequired"
+            value={formData.degreerequired}
             onChange={handleChange}
             required
           />
@@ -387,8 +387,8 @@ const JobPostForm = () => {
         </div>
 
         <button type="submit">Submit</button>
+        <ToastContainer />
       </form>
-      <ToastContainer />
     </div>
   );
 };

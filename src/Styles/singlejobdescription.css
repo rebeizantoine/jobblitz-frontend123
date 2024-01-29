@@ -2,7 +2,7 @@
   margin-top: 20px; /* Adjust the margin as needed */
   position: absolute;
   right: 10%;
-  top: 24%;
+  top: 32%;
 }
 
 .view-contact-button button {
@@ -18,4 +18,338 @@
 
 .view-contact-button button:hover {
   background-color: #45a049; /* Darker green on hover */
+}
+@media screen and (max-width: 400px) {
+  .job-description-big {
+    max-width: 390px;
+    height: 100%;
+    border: 2px solid #0c09aa;
+    background: #fff;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    text-align: left;
+    margin-bottom: 55px;
+  }
+  .job-title-edit {
+    margin-left: -120px;
+  }
+  .job-title-edit-1 {
+    margin-left: -135px;
+  }
+
+  .info-item1-12 {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 16px;
+  }
+  .answer-1 {
+    margin-left: 000px;
+  }
+  .pergunta-123 {
+    color: #000;
+    font-family: Manrope;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .pergunta-123 {
+    display: block;
+    width: 200px;
+    text-align: left;
+    margin-left: 35px;
+  }
+  .title-position {
+    color: #000;
+    font-family: Manrope;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  .company-position {
+    color: #000;
+    font-family: Manrope;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 0px;
+  }
+  .first-flex1 {
+    display: flex;
+    margin-top: -20px;
+  }
+  .location-position {
+    color: #000;
+    font-family: Manrope;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 139px;
+  }
+  .date-position {
+    color: #5c5c5c;
+    font-family: Manrope;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-left: 30px;
+    display: none;
+  }
+  .reach-out {
+    color: #000;
+    font-family: Manrope;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-left: 0px;
+    max-width: 330px;
+  }
+  .job-description {
+    color: #000;
+    font-family: Manrope;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 50px;
+  }
+  .job-overview {
+    color: #000;
+    font-family: Manrope;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-left: -10 0px !important;
+  }
+  .job-text {
+    color: #000;
+    font-family: Manrope;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    max-width: 380px;
+  }
+  .responsibility-1 {
+    color: #000;
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 340px;
+    margin-top: -15px;
+  }
+  .responsibility-2 {
+    color: #000;
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 340px;
+    margin-top: -15px;
+  }
+  .responsibility-3 {
+    color: #000;
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 340px;
+    margin-top: -15px;
+  }
+  .responsibility-4 {
+    color: #000;
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 340px;
+    margin-top: -15px;
+  }
+  .responsibility-5 {
+    color: #000;
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 340px;
+    margin-top: -15px;
+  }
+  .qualification-1 {
+    color: #000;
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 340px;
+    margin-top: -20px;
+  }
+  .qualification-2 {
+    color: #000;
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 340px;
+    margin-top: -20px;
+  }
+  .qualification-3 {
+    color: #000;
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 340px;
+    margin-top: -20px;
+  }
+  .qualification-4 {
+    color: #000;
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 340px;
+    margin-top: -20px;
+  }
+  .skills {
+    color: #000;
+    font-family: Manrope;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: 340px;
+  }
+  .responsibilities {
+    color: #000;
+    font-family: Manrope;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .qualifications {
+    color: #000;
+    font-family: Manrope;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .go-next {
+    margin-left: 0px;
+  }
+
+  .job-description-big {
+    margin: 10px;
+    max-width: 380px !important;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+  }
+  .job-description-box {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    margin-bottom: 20px; /* Add margin between each job description box */
+  }
+
+  .title-position,
+  .company-position,
+  .location-position,
+  .date-position,
+  .reach-out,
+  .job-description,
+  .job-overview,
+  .skills,
+  .responsibilities,
+  .qualifications,
+  .info-item1-12 {
+    margin-bottom: 10px;
+  }
+
+  .first-flex1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .go-next {
+    margin-top: 20px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  .view-contact-button {
+    margin-top: 20px; /* Adjust the margin as needed */
+    position: absolute;
+    right: 20%;
+    top: 34%;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+
+  button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+  .edit-green {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .edit-green:hover {
+    transform: scale(1.2);
+  }
+  .save-edit-button {
+    position: absolute;
+    top: 260px;
+    right: 180px;
+    width: 85px;
+  }
+
+  .savejobdesc {
+    margin-left: 500px;
+    margin-right: 50px;
+    width: 85px;
+  }
+  .canceljobdesc {
+    margin-right: 50px;
+    width: 85px;
+  }
 }

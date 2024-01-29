@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import bullet1 from "../Images/bullet-1.png";
 import axios from "axios";
+import "../Styles/loginemp.css";
 
 const Loginemp = () => {
   const [usernameEmployer, setUsernameEmployer] = useState("");
@@ -92,22 +93,22 @@ const Loginemp = () => {
           )}
         </div>
         <div className="right1">
-          <h3>Not an Employer?</h3>
+          <h3 className="right-1h3">Not an Employer?</h3>
           <p className="para12">
             Becoming a member at Hirelebanese.com offers you the following
             benefits:
           </p>
-          <div className="parabox">
-            <p className="para2">
+          <div className="parabox-1">
+            <p className="para2-1">
               <img src={bullet1} alt="" />
               Posting Job Openings
             </p>
-            <p className="para2">
+            <p className="para2-1">
               {" "}
               <img src={bullet1} alt="" />
               Managing Job Applications
             </p>
-            <p className="para2">
+            <p className="para2-1">
               <img src={bullet1} alt="" />
               Finding the Right Candidates
             </p>

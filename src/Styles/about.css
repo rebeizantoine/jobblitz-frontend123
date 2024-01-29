@@ -58,3 +58,67 @@
   line-height: normal;
   text-transform: capitalize;
 }
+
+@media only screen and (max-width: 768px) {
+  .headerfeature2 {
+    display: flex;
+    margin-top: 50px;
+  }
+  .headerfeature2 h2 {
+    color: #fff;
+    font-family: Manrope;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 115.1%; /* 69.06px */
+    min-width: 650px;
+    height: 69px;
+    text-decoration: none;
+  }
+  .headerfeature2 {
+    background: linear-gradient(96deg, #0c09aa 2.04%, #3c39d4 88.4%);
+    height: 60px;
+  }
+
+  .about-us-title {
+    margin-left: 290px;
+    margin-top: 25px;
+    width: 805px;
+    height: 89px;
+  }
+  .headerfeature2 a {
+    text-decoration: none;
+  }
+  .about-us-image {
+    margin-left: 0px;
+    display: none;
+  }
+  .about-us-main {
+    display: flex;
+  }
+  .about-us-p {
+    width: 330px;
+    color: #616161;
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+    text-align: left;
+    margin-left: 30px;
+  }
+  .about-us-speach {
+    margin-left: 00px;
+  }
+  .about-us-h3 {
+    color: #000;
+    font-family: Manrope;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-left: 10px;
+  }
+}

@@ -1,41 +1,89 @@
-.hero-1{
-    height: 705px;
-    width: 100%;
-    background-color: #0C09AA;
-    
+body {
+  overflow-x: hidden;
+  width: 100%;
 }
 
-.left{
+.hero-1 {
+  height: 705px;
+  width: 100%;
+  background-color: #0c09aa;
+}
+
+.left {
+  text-align: left;
+  margin-left: 150px;
+  margin-top: 110px;
+}
+.left p {
+  width: 570px;
+  color: #fff;
+  font-family: Manrope;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.left h1 {
+  width: 650.653px;
+  color: #fff;
+  font-family: Manrope;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.right img {
+  width: 500px;
+  margin-top: 50px;
+}
+.main {
+  display: flex;
+}
+.headerfeature {
+  background: linear-gradient(96deg, #0c09aa 2.04%, #3c39d4 88.4%);
+  height: 115px;
+}
+
+@media (max-width: 768px) {
+  .hero-1 {
+    height: 185px;
+    width: 100%;
+    background-color: #0c09aa;
+  }
+
+  .left {
     text-align: left;
-    margin-left: 150px;
-    margin-top: 110px;
-}
-.left p{
-    width: 570px;
-    color: #FFF;
-font-family: Manrope;
-font-size: 22px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-}
-.left h1{
-    width: 650.653px;
-    color: #FFF;
-font-family: Manrope;
-font-size: 60px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;    
-}
-.right img{
-    width: 500px;
-    margin-top: 50px;
-}
-.main{
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  .left p {
+    width: 330px;
+    color: #fff;
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .left h1 {
+    width: 330.653px;
+    color: #fff;
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .right img {
+    width: 200px;
+    margin-top: 20px;
+    display: none;
+  }
+  .main {
     display: flex;
-}
-.headerfeature{
-    background: linear-gradient(96deg, #0C09AA 2.04%, #3C39D4 88.4%);
+  }
+  .headerfeature {
+    background: linear-gradient(96deg, #0c09aa 2.04%, #3c39d4 88.4%);
     height: 115px;
+  }
 }

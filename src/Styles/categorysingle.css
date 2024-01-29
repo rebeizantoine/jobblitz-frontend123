@@ -185,8 +185,13 @@
   background: #fff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   margin-top: 25px;
-  margin-left: 12%;
+  margin-left: 17%;
   margin-bottom: 25px;
+  transition: transform 0.3s ease;
+}
+.last-box-123:hover {
+  cursor: pointer;
+  transform: scale(1.05);
 }
 .last-box-123 h2 {
   color: #000;
@@ -548,4 +553,567 @@
   margin-top: 6px;
   margin-left: 220px;
   margin-top: 20px;
+}
+@media screen and (max-width: 400px) {
+  .all-boxes-jobseek {
+    margin-left: 280px;
+    margin-bottom: 35px;
+    height: 100%;
+  }
+  .image-highest img {
+    width: 99px;
+    height: 92px;
+    border-radius: 50%;
+    margin-left: -500px;
+    margin-top: 20px;
+    border-color: #000;
+    border: 2px solid grey;
+  }
+  .profilething {
+    margin-top: -110px;
+  }
+
+  .highest-box-1 {
+    width: 920px;
+    height: 100%;
+    border: 1px solid #e0e0e0;
+    background: #fff;
+    margin-bottom: 25px;
+    margin-top: 25px;
+  }
+  .highest-box-1 h2 {
+    color: #000;
+    font-family: Manrope;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 0px;
+    text-align: left;
+    margin-left: 300px;
+  }
+  .info-box {
+    margin-top: -20px;
+    text-align: left;
+    margin-left: 300px;
+  }
+  .pergunta {
+    display: block;
+    width: 200px;
+  }
+  .pergunta-special {
+    display: block;
+    width: 200px;
+  }
+  .answer12 {
+    width: 250px;
+    height: 20px !important;
+    margin-bottom: 20px;
+  }
+  .info-item1 {
+    display: flex;
+    flex-direction: row;
+  }
+  .second-box {
+    width: 920px;
+    height: 326px;
+    border: 1px solid #e0e0e0;
+    background: #fff;
+    margin-bottom: 25px;
+  }
+  .save-top-1 {
+    margin-right: 30px;
+  }
+  .second-box h2 {
+    color: #000;
+    font-family: Manrope;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+    margin-left: 45px;
+  }
+  .pergunta-1 {
+    display: block;
+    width: 200px;
+    text-align: left;
+    margin-left: 35px;
+  }
+  .answer12-1 {
+    width: 400px;
+    text-align: left;
+    color: #000;
+    font-family: Manrope;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 200px;
+  }
+  .info-item1-1 {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 16px;
+  }
+  .sidebyside {
+    display: flex;
+  }
+  .third-box1 {
+    width: 360px !important;
+    height: 100%;
+    border: 1px solid #e0e0e0;
+    background: #fff;
+    margin-right: 13px;
+    margin-top: 0px;
+  }
+  .third-box1 h2 {
+    color: #000;
+    font-family: Manrope;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+    margin-left: 45px;
+  }
+  .third-box1 p {
+    color: #000;
+    font-family: Manrope;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 639px;
+    text-align: left;
+    margin-left: 35px;
+  }
+  .fourth-box1 {
+    width: 350px;
+    height: 192px;
+    border: 1px solid #e0e0e0;
+    background: #fff;
+    margin-top: -433.5px;
+    margin-left: -363px;
+    text-align: left;
+  }
+  .fourth-box1 h2 {
+    color: #000;
+    font-family: Manrope;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .fourth-box1 p {
+    color: #000;
+    font-family: Manrope;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 160px;
+  }
+  .fourth-box1 button {
+    width: 120px;
+    height: 40px;
+    background: #2748fc;
+    color: #fff;
+    font-family: Manrope;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    font-size: 14px;
+    margin-top: 4px;
+  }
+  .pergunta-1 {
+    color: #000;
+    font-family: Manrope;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .last-box-123 {
+    width: 320px;
+    height: 100%;
+    border: 1px solid #e0e0e0;
+    background: #fff;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-top: 25px;
+    margin-left: 9%;
+    margin-bottom: 25px;
+    transition: transform 0.3s ease;
+  }
+  .last-box-123:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+  .last-box-123 h2 {
+    color: #000;
+    font-family: Manrope;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+  }
+  .flex-1 {
+    display: flex;
+  }
+  .flex-2-123 {
+    display: flex;
+    margin-top: 0px !important;
+  }
+  .last-box-123 h3 {
+    color: #356ae6;
+    font-family: Manrope;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: left;
+  }
+  .last-box-123 h4 {
+    color: #000;
+    font-family: Manrope;
+    font-size: 20 px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: -10px;
+  }
+  .last-box-123 h5 {
+    color: #dfb2b2;
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: -14px;
+    margin-left: 20px;
+  }
+  .description-small {
+    color: #000;
+    font-family: Manrope;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: 810px;
+    height: 59px;
+    text-align: left;
+    margin-top: -20px;
+  }
+  .last-box-123 img {
+    height: 40px;
+    width: 40px;
+  }
+  .money-123 {
+    color: #000;
+    font-family: Manrope;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 200px !important;
+  }
+  .datenow-123 {
+    color: #000;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-left: 600px;
+    margin-top: 10px;
+    display: none;
+  }
+  .editimage123 {
+    width: 30px;
+    position: absolute;
+    top: 150px;
+    left: 1100px;
+  }
+
+  .inside-last-box-123 {
+    margin-left: 30px;
+  }
+  .beforeside {
+    width: 920px;
+    height: 432px;
+    border: 1px solid #e0e0e0;
+    background: #fff;
+    margin-bottom: 25px;
+  }
+  .beforeside h2 {
+    color: #000;
+    font-family: Manrope;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+  }
+  .flex-logo {
+    display: flex;
+  }
+  .flex-logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-left: 40px;
+    border: 2px solid grey;
+  }
+  .info-box-12 {
+    position: absolute;
+    top: 710px;
+    left: 850px;
+    width: 35px;
+    height: 35px;
+  }
+  .info-box-12-edit {
+    margin-top: 0px;
+    margin-left: 200px;
+  }
+
+  .info-box-12 img {
+    width: 30px;
+    height: 30px;
+  }
+  .editing-box {
+    margin-top: -310px !important;
+    margin-left: 0px;
+    width: 532px;
+  }
+  /* Add !important to override any conflicting styles */
+  /* Add !important to override any conflicting styles */
+  .editing-box {
+    background-color: #0c09aa !important; /* Change the color code as per your preference */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+    max-height: 300px;
+    overflow-y: auto; /* Add scrollbar when content exceeds max height */
+  }
+
+  /* Updated styles for the label */
+  .editing-box label {
+    display: block;
+    margin-bottom: 8px; /* Adjusted margin for better spacing */
+    color: #ffffff; /* Changed label text color */
+    font-family: "Manrope", sans-serif; /* Changed font family */
+    font-size: 20px; /* Changed font size */
+    color: #ffffff;
+    font-family: Manrope;
+    margin-top: -20px;
+    text-align: left;
+  }
+
+  .editing-box input,
+  .editing-box textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+  }
+
+  .editing-box button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .editing-box button:hover {
+    background-color: #45a049;
+  }
+
+  .editing-box button + button {
+    margin-left: 10px;
+  }
+
+  .imageofedit2 {
+    width: 20px;
+    height: 20px;
+    margin-top: -105px;
+    margin-left: -400px;
+  }
+  .imageofedit {
+    margin-left: -80px;
+    margin-top: 45px;
+  }
+  .pergunta-12345 {
+    display: block;
+    width: 200px;
+    text-align: left;
+    margin-left: 35px;
+    color: #000;
+    font-family: Manrope;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .answer-12345 {
+    width: 400px;
+    text-align: left;
+    color: #000;
+    font-family: Manrope;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 300px;
+    margin-top: -22px;
+  }
+  .pergunta-123456 {
+    display: block;
+    width: 200px;
+    text-align: left;
+    margin-left: 35px;
+    color: #000;
+    font-family: Manrope;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .answer-123456 {
+    width: 400px;
+    text-align: left;
+    color: #000;
+    font-family: Manrope;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 300px;
+    margin-top: -22px;
+  }
+  .info-box-1234 {
+    margin-top: 25px;
+    margin-left: -699px;
+  }
+  .info-box-123 {
+  }
+
+  .editing-box-123 {
+    background-color: #0c09aa !important; /* Change the color code as per your preference */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+    max-height: 300px;
+    overflow-y: auto; /* Add scrollbar when content exceeds max height */
+    color: #ffffff; /* Default text color */
+  }
+
+  /* Updated styles for the label */
+  .editing-box-123 label {
+    display: block;
+    margin-bottom: 8px; /* Adjusted margin for better spacing */
+    color: #ffffff; /* Changed label text color */
+    font-family: "Manrope", sans-serif; /* Changed font family */
+    font-size: 20px; /* Changed font size */
+    margin-top: -20px;
+    text-align: left;
+  }
+
+  .editing-box-123 input,
+  .editing-box-123 textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    background-color: #ffffff; /* Default input/textarea background color */
+    color: #000000; /* Default input/textarea text color */
+  }
+
+  .editing-box-123 button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .editing-box-123 button:hover {
+    background-color: #45a049;
+  }
+  .description-small-123 {
+    margin-left: -30px;
+  }
+
+  .editing-box-123 button + button {
+    margin-left: 10px;
+  }
+  .info-box-1234567 {
+  }
+
+  .handledelete-img {
+    margin-top: -235px !important;
+    margin-left: 850px;
+  }
+  .job-application-container {
+    height: 250px;
+  }
+  .job-application-container {
+    border: 1px solid #e0e0e0;
+    background: #fff;
+    margin-bottom: 25px;
+  }
+  .job-application-container:hover {
+    transform: scale(
+      1.1
+    ); /* You can adjust the scale factor according to your preference */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .editing12345 {
+    margin-bottom: 25px;
+    width: 85px !important;
+  }
+  .before-last-box-123 {
+    display: flex;
+    width: 920px;
+
+    border: 1px solid #e0e0e0;
+    background: #fff;
+    margin-bottom: 25px;
+    margin-top: 25px;
+  }
+  .before-last-box-123 h2 {
+    color: #000;
+    font-family: Manrope;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+    margin-left: 45px;
+  }
+
+  .post-job-button1 button {
+    width: 100px;
+    height: 40px;
+    background: #2748fc;
+    color: #fff;
+    font-family: Manrope;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    font-size: 14px;
+    margin-top: 6px;
+    margin-left: 220px;
+    margin-top: 20px;
+  }
 }

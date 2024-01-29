@@ -234,6 +234,14 @@
   border-radius: 8px;
   background-color: #fff;
 }
+.job-description-box {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  margin-bottom: 20px; /* Add margin between each job description box */
+}
 
 .title-position,
 .company-position,
@@ -294,8 +302,8 @@ button:hover {
 }
 .save-edit-button {
   position: absolute;
-  top: 220px;
-  right: 100px;
+  top: 260px;
+  right: 180px;
   width: 85px;
 }
 
