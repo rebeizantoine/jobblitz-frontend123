@@ -326,7 +326,7 @@
   .view-contact-button {
     margin-top: 20px; /* Adjust the margin as needed */
     position: absolute;
-    right: 20%;
+    right: 10.5%;
     top: 34%;
   }
 
@@ -372,5 +372,26 @@
   .canceljobdesc {
     margin-right: 50px;
     width: 85px;
+  }
+  .apply-job-button1 {
+    width: 150px;
+    position: absolute;
+    right: 4.5%;
+    top: 42%;
+  }
+
+  .apply-job-button1 button {
+    background-color: #0c09aa; /* Green background color */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Padding for the button */
+    font-size: 16px; /* Font size */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color transition */
+  }
+
+  .apply-job-button1 button:hover {
+    background-color: #45a049; /* Darker green on hover */
   }
 }

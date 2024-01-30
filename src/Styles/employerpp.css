@@ -1044,8 +1044,8 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-left: 140px !important;
-    margin-top: -22px;
+    margin-left: 20px !important;
+    margin-top: 0px !important;
   }
   .answer-1 {
     max-height: 150px !important;
@@ -1054,7 +1054,6 @@
     display: block;
     width: 200px;
     text-align: left;
-    margin-left: 190px !important;
     color: #000;
     font-family: Manrope;
     font-size: 15px;
@@ -1071,8 +1070,8 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-left: 300px !important;
-    margin-top: -22px;
+    margin-left: 20px !important;
+    margin-top: 0px !important;
   }
   .info-box-1234 {
     margin-top: 25px;
