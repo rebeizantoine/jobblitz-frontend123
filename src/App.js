@@ -36,6 +36,8 @@ import EmployerppReadOnly from "./Components/EmployerppReadonly";
 import Updateterms from "./Components/Updateterms";
 import Headerloggedin from "./Components/headerlogedin";
 import Headerloggedinemp from "./Components/headerlogedinemp";
+import Applyjob from "./Components/Applyjob";
+import JobseekerppReadOnly from "./Components/Jobseekerppreadonly";
 function App() {
   return (
     <div className="App">
@@ -93,19 +95,37 @@ function App() {
               </>
             }
           />
-
           <Route
+            path="/jobseekerppreadonly"
             element={
               <>
-                <JobseekerRoutes />
+                <JobseekerppReadOnly />
               </>
             }
-          >
+          />
+
+          <Route element={<JobseekerRoutes />}>
             <Route
               path="/jobseekerpp/:usernamejobseek"
               element={
                 <>
                   <Jobseekpp />
+                </>
+              }
+            />
+            <Route
+              path="/applyjob/:jobId"
+              element={
+                <>
+                  <Applyjob />
+                </>
+              }
+            />
+            <Route
+              path="/jobseekerppreadonly"
+              element={
+                <>
+                  <JobseekerppReadOnly />
                 </>
               }
             />

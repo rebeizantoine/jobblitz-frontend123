@@ -44,6 +44,9 @@ const Singlejobdescription = () => {
       navigate(`/employerppreadonly/${usernameEmployer}`);
     }
   };
+  const handleApplyJob = () => {
+    navigate(`/applyjob/${jobId}`);
+  };
 
   return (
     <div className="job-description-big">
@@ -54,6 +57,9 @@ const Singlejobdescription = () => {
             <button onClick={handleViewContactInformation}>
               View Contact Information
             </button>
+          </div>
+          <div className="apply-job-button1">
+            <button onClick={handleApplyJob}>Apply to Job</button>
           </div>
           <h2 className="company-position">{jobDescription.companyname}</h2>
           <div className="first-flex1">

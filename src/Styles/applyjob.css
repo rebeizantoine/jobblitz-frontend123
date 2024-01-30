@@ -1,0 +1,75 @@
+/* Styles for ApplyJob component */
+
+.apply-job-container {
+  margin: 20px;
+  margin-left: 35%;
+}
+
+.apply-job-title {
+  font-size: 24px;
+  color: #333;
+  margin-left: -500px;
+}
+
+.apply-job-form {
+  max-width: 400px;
+  margin: 20px 0;
+}
+
+.apply-job-label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.apply-job-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  color: #000;
+  font-family: Manrope;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.apply-job-textarea {
+  width: 100%;
+  height: 250px;
+  padding: 8px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  color: #000;
+  font-family: Manrope;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.apply-job-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.apply-job-button:hover {
+  background-color: #45a049;
+}
+
+.apply-job-info {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+.apply-job-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.apply-job-link:hover {
+  text-decoration: underline;
+}

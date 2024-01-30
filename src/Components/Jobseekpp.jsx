@@ -154,7 +154,10 @@ const Jobseekpp = () => {
       </div>
       <div className="highest-box">
         <div className="image-highest">
-          <img src={topimage} alt="" />
+          <div className="circular-avatar">
+            <span>{jobseekData.firstnamejobseek.charAt(0)}</span>
+            <span>{jobseekData.lastnamejobseek.charAt(0)}</span>
+          </div>
         </div>
         <div className="profilething">
           <h2>{`${jobseekData.firstnamejobseek} ${jobseekData.lastnamejobseek}`}</h2>
@@ -255,42 +258,30 @@ const Jobseekpp = () => {
               {" "}
               <strong>Name:</strong>
             </div>{" "}
-            <div className="answer-1">Antoine Rebeiz</div>
-          </div>
-          <div className="info-item-1">
-            <div className="pergunta-1">
-              {" "}
-              <strong>Birth Date:</strong>
-            </div>{" "}
-            <div className="answer-1">22-03-2000</div>{" "}
+            <div className="answer-1">
+              {jobseekData.firstnamejobseek} {jobseekData.lastnamejobseek}
+            </div>
           </div>
           <div className="info-item-1">
             <div className="pergunta-1">
               {" "}
               <strong>Gender:</strong>
             </div>{" "}
-            <div className="answer-1">Male</div>
+            <div className="answer-1">{jobseekData.genderjobseek}</div>
           </div>
           <div className="info-item-1">
             <div className="pergunta-1">
               {" "}
               <strong>Nationality:</strong>
             </div>{" "}
-            <div className="answer-1">Lebanese</div>
+            <div className="answer-1">{jobseekData.Nationalityjobseek}</div>
           </div>
           <div className="info-item-1">
             <div className="pergunta-1">
               {" "}
               <strong>Residence Country:</strong>
             </div>{" "}
-            <div className="answer-1">Lebanon</div>{" "}
-          </div>
-          <div className="info-item-1">
-            <div className="pergunta-1">
-              {" "}
-              <strong>Marital status:</strong>
-            </div>{" "}
-            <div className="answer-1">Single</div>
+            <div className="answer-1">{jobseekData.addressjobseek}</div>{" "}
           </div>
         </div>
       </div>
