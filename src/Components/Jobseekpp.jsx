@@ -32,7 +32,7 @@ const Jobseekpp = () => {
   const handleHighestBoxEditSave = async () => {
     try {
       await axios.put(
-        `https://backendjobblitz.onrender.com/jobseeker/jobseekers/update/${jobseekData._id}`,
+        `https://backendjobblitz.onrender.com/jobseeker/jobseekers/${jobseekData._id}`,
         highestBoxEditedData,
         {
           headers: {
@@ -76,7 +76,7 @@ const Jobseekpp = () => {
 
       // Update the jobseeker data with the uploaded CV path
       await axios.put(
-        `https://backendjobblitz.onrender.com/jobseeker/jobseekers/update/${jobseekData._id}`,
+        `https://backendjobblitz.onrender.com/jobseeker/jobseekers/${jobseekData._id}`,
         { cvjobseek: uploadedCVPath },
         {
           headers: {
@@ -94,7 +94,7 @@ const Jobseekpp = () => {
   const handleContactInfoEditSave = async () => {
     try {
       await axios.put(
-        `https://backendjobblitz.onrender.com/jobseeker/jobseekers/update/${jobseekData._id}`,
+        `https://backendjobblitz.onrender.com/jobseeker/jobseekers/${jobseekData._id}`,
         contactInfoEditedData,
         {
           headers: {
