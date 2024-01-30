@@ -102,12 +102,6 @@ const Employerdash = () => {
         />
       </div>
       <h1>Employers Details</h1>
-      <img
-        className="logout-image-dash"
-        src={logoutimage}
-        onClick={handleLogout}
-        alt=""
-      />
       <table className="products-table">
         <thead>
           <tr>
