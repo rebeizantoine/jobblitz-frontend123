@@ -23,7 +23,7 @@ const JobseekppReadOnly = () => {
     const fetchJobseekData = async () => {
       try {
         const response = await axios.get(
-          `https://backendjobblitz.onrender.com/jobseeker/jobseekers/username/${storedUsername}`
+          `https://allinone-14n7.onrender.com/jobseeker/jobseekers/username/${storedUsername}`
         );
         setJobseekData(response.data);
 

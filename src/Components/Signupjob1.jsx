@@ -63,7 +63,7 @@ const Signupjob = () => {
     };
 
     axios
-      .post("https://backendjobblitz.onrender.com/jobseeker/jobseekers", {
+      .post("https://allinone-14n7.onrender.com/jobseeker/jobseekers", {
         firstnamejobseek,
         lastnamejobseek,
         usernamejobseek,

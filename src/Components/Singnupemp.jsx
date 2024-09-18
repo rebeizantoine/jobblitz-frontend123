@@ -60,7 +60,7 @@ const Singnupemp = () => {
     }
 
     axios
-      .post("https://backendjobblitz.onrender.com/employer/employers", {
+      .post("https://allinone-14n7.onrender.com/employer/employers", {
         firstnameEmployer,
         lastnameEmployer,
         usernameEmployer,

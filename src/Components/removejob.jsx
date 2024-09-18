@@ -20,7 +20,7 @@ const Removejob = () => {
   const fetchJobApplications = async () => {
     try {
       const response = await axios.get(
-        "https://backendjobblitz.onrender.com/jobdescriptions/getAll"
+        "https://allinone-14n7.onrender.com/jobdescriptions/getAll"
       );
       setJobApplications(response.data);
     } catch (error) {
@@ -59,7 +59,7 @@ const Removejob = () => {
     try {
       // Send a DELETE request to delete the job description
       await axios.delete(
-        `https://backendjobblitz.onrender.com/jobdescriptions/delete/${jobId}`
+        `https://allinone-14n7.onrender.com/jobdescriptions/delete/${jobId}`
       );
 
       // After successful deletion, you can update the state or fetch the updated job applications

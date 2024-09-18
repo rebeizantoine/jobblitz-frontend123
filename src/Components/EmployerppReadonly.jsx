@@ -14,7 +14,7 @@ const EmployerppReadOnly = () => {
     const fetchEmployerData = async () => {
       try {
         const response = await axios.get(
-          `https://backendjobblitz.onrender.com/employer/employers/username/${usernameEmployer}`
+          `https://allinone-14n7.onrender.com/employer/employers/username/${usernameEmployer}`
         );
         setEmployerData(response.data.data);
       } catch (error) {

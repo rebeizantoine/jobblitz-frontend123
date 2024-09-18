@@ -14,7 +14,7 @@ const Jobseekdash = () => {
     const fetchJobseekers = async () => {
       try {
         const response = await axios.get(
-          "https://backendjobblitz.onrender.com/jobseeker/jobseekers"
+          "https://allinone-14n7.onrender.com/jobseeker/jobseekers"
         );
         setJobseekers(response.data);
       } catch (error) {
@@ -55,7 +55,7 @@ const Jobseekdash = () => {
         throw new Error("Invalid jobseekerId");
       }
       await axios.delete(
-        `https://backendjobblitz.onrender.com/jobseeker/jobseekers/${jobseekerId}`
+        `https://allinone-14n7.onrender.com/jobseeker/jobseekers/${jobseekerId}`
       );
       // Update the state to reflect the changes
       setJobseekers((prevJobseekers) =>

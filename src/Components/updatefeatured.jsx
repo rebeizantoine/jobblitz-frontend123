@@ -21,7 +21,7 @@ const UpdateFeatured = () => {
     const fetchFeaturedEmployers = async () => {
       try {
         const response = await axios.get(
-          "https://backendjobblitz.onrender.com/featuredemployer"
+          "https://allinone-14n7.onrender.com/featuredemployer"
         );
         setFeaturedEmployers(response.data);
       } catch (error) {
@@ -80,14 +80,14 @@ const UpdateFeatured = () => {
       formData.append("employerImage", newEmployerImage);
 
       await axios.put(
-        `https://backendjobblitz.onrender.com/featuredemployer/updateFeaturedEmployer/${selectedEmployer._id}`,
+        `https://allinone-14n7.onrender.com/featuredemployer/updateFeaturedEmployer/${selectedEmployer._id}`,
         formData
       );
 
       // Close the modal and fetch updated data
       closeUpdateModal();
       const updatedResponse = await axios.get(
-        "https://backendjobblitz.onrender.com/featuredemployer"
+        "https://allinone-14n7.onrender.com/featuredemployer"
       );
       setFeaturedEmployers(updatedResponse.data);
       toast(`${newEmployerName} was updated successfully`);

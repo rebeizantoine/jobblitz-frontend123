@@ -83,7 +83,7 @@ const JobPostForm = () => {
     e.preventDefault();
     try {
       await axios.post(
-        "https://backendjobblitz.onrender.com/jobdescriptions/add",
+        "https://allinone-14n7.onrender.com/jobdescriptions/add",
         formData
       );
       toast.success("Job post added successfully!");

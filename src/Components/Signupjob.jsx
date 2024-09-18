@@ -60,7 +60,7 @@ const Signupjob1 = () => {
     }
 
     axios
-      .post("https://backendjobblitz.onrender.com/jobseeker/jobseekers", {
+      .post("https://allinone-14n7.onrender.com/jobseeker/jobseekers", {
         firstnamejobseek,
         lastnamejobseek,
         usernamejobseek,
@@ -78,7 +78,7 @@ const Signupjob1 = () => {
         setRegistrationSuccess(true);
         window.alert("Registration successful. You can now log in!");
         // You can also navigate to another page if needed
-        navigate('/loginemp');
+        navigate("/loginemp");
       })
       .catch((error) => {
         console.error("Error occurred while registering:", error);

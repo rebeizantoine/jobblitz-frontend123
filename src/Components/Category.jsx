@@ -11,7 +11,7 @@ const Category = () => {
     const fetchCategories = async () => {
       try {
         const response = await axios.get(
-          "https://backendjobblitz.onrender.com/categories/"
+          "https://allinone-14n7.onrender.com/categories/"
         );
         setCategories(response.data);
       } catch (error) {

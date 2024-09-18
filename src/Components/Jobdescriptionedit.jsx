@@ -14,7 +14,7 @@ const Jobdecriptionedit = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        `https://backendjobblitz.onrender.com/jobdescriptions/jobdescriptions/${id}`
+        `https://allinone-14n7.onrender.com/jobdescriptions/jobdescriptions/${id}`
       );
       setJobDescription(response.data);
     } catch (error) {
@@ -45,7 +45,7 @@ const Jobdecriptionedit = () => {
     // For simplicity, you can send a PUT request to update the job on the server
     axios
       .put(
-        `https://backendjobblitz.onrender.com/jobdescriptions/${id}`,
+        `https://allinone-14n7.onrender.com/jobdescriptions/${id}`,
         editedJob
       )
       .then((response) => {

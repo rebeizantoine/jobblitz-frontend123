@@ -12,7 +12,7 @@ const Admindash = () => {
     e.preventDefault();
     try {
       const response = await axios.get(
-        "https://backendjobblitz.onrender.com/employer/getAll"
+        "https://allinone-14n7.onrender.com/employer/getAll"
       );
       setEmployers(response.data);
     } catch (error) {

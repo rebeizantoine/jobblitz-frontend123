@@ -15,7 +15,7 @@ const Singlejobdescription = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        `https://backendjobblitz.onrender.com/jobdescriptions/jobdescriptions/${jobId}`
+        `https://allinone-14n7.onrender.com/jobdescriptions/jobdescriptions/${jobId}`
       );
       setJobDescription(response.data);
     } catch (error) {

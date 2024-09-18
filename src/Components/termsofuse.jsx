@@ -9,7 +9,7 @@ const Termsofuse = () => {
     const fetchTermsData = async () => {
       try {
         const response = await axios.get(
-          "https://backendjobblitz.onrender.com/terms/terms"
+          "https://allinone-14n7.onrender.com/terms/terms"
         );
         setTermsData(response.data);
       } catch (error) {

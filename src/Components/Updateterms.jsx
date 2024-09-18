@@ -26,7 +26,7 @@ const Updateterms = () => {
   const fetchTerms = async () => {
     try {
       const response = await axios.get(
-        "https://backendjobblitz.onrender.com/terms/terms"
+        "https://allinone-14n7.onrender.com/terms/terms"
       );
       setTerms(response.data);
     } catch (error) {
@@ -74,7 +74,7 @@ const Updateterms = () => {
   const handleUpdateTerm = async () => {
     try {
       const response = await axios.put(
-        `https://backendjobblitz.onrender.com/terms/terms/update/${selectedTerm._id}`,
+        `https://allinone-14n7.onrender.com/terms/terms/update/${selectedTerm._id}`,
         updatedTerm
       );
 

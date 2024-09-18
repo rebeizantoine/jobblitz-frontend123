@@ -16,7 +16,7 @@ const Loginjobb = () => {
     try {
       console.log("Logging in...");
       const response = await axios.post(
-        "https://backendjobblitz.onrender.com/admin/admins/login",
+        "https://allinone-14n7.onrender.com/admin/admins/login",
         {
           adminname,
           adminpassword,

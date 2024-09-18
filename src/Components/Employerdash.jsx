@@ -14,7 +14,7 @@ const Employerdash = () => {
     const fetchEmployers = async () => {
       try {
         const response = await axios.get(
-          "https://backendjobblitz.onrender.com/employer/getAll"
+          "https://allinone-14n7.onrender.com/employer/getAll"
         );
         setEmployers(response.data);
       } catch (error) {
@@ -55,7 +55,7 @@ const Employerdash = () => {
         throw new Error("Invalid employerId");
       }
       await axios.delete(
-        `https://backendjobblitz.onrender.com/employer/employers/delete/${employerId}`
+        `https://allinone-14n7.onrender.com/employer/employers/delete/${employerId}`
       );
       // Update the state to reflect the changes
       setEmployers((prevEmployers) =>

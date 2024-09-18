@@ -46,7 +46,7 @@ const Employerpp = () => {
     const fetchJobApplications = async () => {
       try {
         const response = await axios.get(
-          `https://backendjobblitz.onrender.com/jobdescriptions/employer/${usernameEmployer}`
+          `https://allinone-14n7.onrender.com/jobdescriptions/employer/${usernameEmployer}`
         );
         setJobApplications(response.data);
       } catch (error) {
@@ -60,7 +60,7 @@ const Employerpp = () => {
     const fetchEmployerData = async () => {
       try {
         const response = await axios.get(
-          `https://backendjobblitz.onrender.com/employer/employers/username/${usernameEmployer}`
+          `https://allinone-14n7.onrender.com/employer/employers/username/${usernameEmployer}`
         );
         setEmployerData(response.data.data);
       } catch (error) {
@@ -73,7 +73,7 @@ const Employerpp = () => {
   const handleHighestBoxEditSave = async () => {
     try {
       await axios.put(
-        `https://backendjobblitz.onrender.com/employer/employers/update/${employerData._id}`,
+        `https://allinone-14n7.onrender.com/employer/employers/update/${employerData._id}`,
         highestBoxEditedData,
         {
           headers: {
@@ -83,7 +83,7 @@ const Employerpp = () => {
       );
 
       const response = await axios.get(
-        `https://backendjobblitz.onrender.com/employer/employers/username/${usernameEmployer}`
+        `https://allinone-14n7.onrender.com/employer/employers/username/${usernameEmployer}`
       );
       setEmployerData(response.data.data);
       setHighestBoxEditMode(false);
@@ -96,7 +96,7 @@ const Employerpp = () => {
   const handleOtherBoxesEditSave = async () => {
     try {
       await axios.put(
-        `https://backendjobblitz.onrender.com/employer/employers/update/${employerData._id}`,
+        `https://allinone-14n7.onrender.com/employer/employers/update/${employerData._id}`,
         otherBoxesEditedData,
         {
           headers: {
@@ -106,7 +106,7 @@ const Employerpp = () => {
       );
 
       const response = await axios.get(
-        `https://backendjobblitz.onrender.com/employer/employers/username/${usernameEmployer}`
+        `https://allinone-14n7.onrender.com/employer/employers/username/${usernameEmployer}`
       );
       setEmployerData(response.data.data);
       setOtherBoxesEditMode(false);
@@ -119,7 +119,7 @@ const Employerpp = () => {
   const handleContactInfoEditSave = async () => {
     try {
       await axios.put(
-        `https://backendjobblitz.onrender.com/employer/employers/update/${employerData._id}`,
+        `https://allinone-14n7.onrender.com/employer/employers/update/${employerData._id}`,
         contactInfoEditedData,
         {
           headers: {
@@ -128,7 +128,7 @@ const Employerpp = () => {
         }
       );
       const response = await axios.get(
-        `https://backendjobblitz.onrender.com/employer/employers/username/${usernameEmployer}`
+        `https://allinone-14n7.onrender.com/employer/employers/username/${usernameEmployer}`
       );
       setEmployerData(response.data.data);
       setContactInfoEditMode(false);
@@ -148,11 +148,11 @@ const Employerpp = () => {
       }
 
       await axios.delete(
-        `https://backendjobblitz.onrender.com/jobdescriptions/delete/${id}`
+        `https://allinone-14n7.onrender.com/jobdescriptions/delete/${id}`
       );
       // Fetch job applications again after deletion
       const response = await axios.get(
-        `https://backendjobblitz.onrender.com/jobdescriptions/employer/${usernameEmployer}`
+        `https://allinone-14n7.onrender.com/jobdescriptions/employer/${usernameEmployer}`
       );
       setJobApplications(response.data);
       toast.success("Job application deleted successfully");

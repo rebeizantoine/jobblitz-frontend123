@@ -15,7 +15,7 @@ const Loginemp = () => {
       console.log("Logging in...");
       // Simulate a login request using Axios
       const response = await axios.post(
-        "https://backendjobblitz.onrender.com/employer/login",
+        "https://allinone-14n7.onrender.com/employer/login",
         {
           usernameEmployer,
           passwordnameEmployer,
