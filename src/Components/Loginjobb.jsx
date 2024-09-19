@@ -15,7 +15,7 @@ const Loginjobb = () => {
   const handleLogin = async () => {
     try {
       const response = await axios.post(
-        "https://backendjobblitz.onrender.com/jobseeker/jobseekers/login",
+        "https://allinone-14n7.onrender.com/jobseeker/jobseekers/login",
         {
           usernamejobseek,
           passwordnamejobseek,
