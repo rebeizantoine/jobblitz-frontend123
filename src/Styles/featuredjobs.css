@@ -1,168 +1,99 @@
-.headerfeature {
-  display: flex;
+/* MAIN SECTION */
+.featured-section {
+  width: 100%;
+  margin-top: 40px;
 }
 
-.headerfeature h2 {
+/* HEADER */
+.header-feature {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(96deg, #0c09aa, #3c39d4);
+  padding: 25px 80px;
+}
+
+.header-feature h2 {
   color: #fff;
   font-family: Manrope;
-  font-size: 60px;
-  font-style: normal;
+  font-size: 48px;
   font-weight: 600;
-  line-height: 115.1%;
-  width: 420px;
-  height: 69px;
+}
+
+.view-all {
+  color: #fff;
+  font-family: Manrope;
+  font-size: 32px;
+  font-weight: 600;
   text-decoration: none;
 }
 
-.featured {
-}
-
-.viewall {
-  margin-left: 500px;
-  margin-top: 25px;
-}
-
-.viewall a {
-  font-size: 60px;
-}
-
-.featured-jobs {
-  margin-left: 90px;
-  margin-top: 25px;
-}
-
-.headerfeature a {
-  text-decoration: none;
-}
-
-.big-box-1 {
+/* GRID */
+.grid-jobs {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-gap: 20px;
-  margin-top: 20px;
-  margin-bottom: 40px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 25px 80px;
 }
 
-.box-1 {
-  width: 400px;
-  max-width: 500px;
-  margin: 0 auto;
-  height: 180px;
-  border: 3px solid #0c09aa;
+/* CARD */
+.job-card {
   background: #fff;
+  border: 3px solid #0c09aa;
   padding: 20px;
-  transition: transform 0.3s ease, cursor 0.3s ease; /* Add transition for a smooth effect */
+  height: 180px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-/* Add hover effect */
-.box-1:hover {
-  transform: scale(1.1); /* Enlarge scale on hover */
-  cursor: pointer; /* Change cursor on hover */
+.job-card:hover {
+  transform: scale(1.05);
 }
 
-.box-1-p1 {
+.job-title {
   color: #356ae6;
-  text-align: center;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  font-family: Manrope;
-  font-size: 25px;
-  font-style: normal;
+  font-size: 22px;
   font-weight: 600;
-  line-height: 115.1%;
-  margin-top: 45px;
-}
-
-.box-1-p2 {
-  color: #d9d9d9;
+  margin-top: 20px;
   text-align: center;
-  font-family: Manrope;
-  font-size: 25px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 115.1%;
 }
-@media only screen and (max-width: 768px) {
-  .headerfeature {
-    display: flex;
-    height: 60px !important;
+
+.job-company {
+  color: #a5a5a5;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .header-feature {
+    padding: 15px 20px;
   }
 
-  .headerfeature h2 {
-    color: #fff;
-    font-family: Manrope;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 115.1%;
-    max-width: 330px;
-    height: 29px;
-    text-decoration: none;
-  }
-
-  .featured {
-  }
-
-  .viewall {
-    margin-left: 00px;
-    margin-top: 25px;
-  }
-
-  .viewall a {
+  .header-feature h2 {
     font-size: 20px;
   }
 
-  .featured-jobs {
-    margin-left: -2px;
-    margin-top: 25px;
+  .view-all {
+    font-size: 18px;
   }
 
-  .headerfeature a {
-    text-decoration: none;
-  }
-
-  .big-box-1 {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-gap: 20px;
-    margin-top: 20px;
-    margin-bottom: 40px;
-  }
-
-  .box-1 {
-    max-width: 80px;
-    margin: 0 auto;
-    height: 180px;
-    border: 3px solid #0c09aa;
-    background: #fff;
+  .grid-jobs {
+    grid-template-columns: repeat(2, 1fr);
     padding: 20px;
-    transition: transform 0.3s ease, cursor 0.3s ease; /* Add transition for a smooth effect */
   }
 
-  /* Add hover effect */
-  .box-1:hover {
-    transform: scale(1.1); /* Enlarge scale on hover */
-    cursor: pointer; /* Change cursor on hover */
+  .job-card {
+    height: auto;
+    padding: 10px;
   }
 
-  .box-1-p1 {
-    color: #356ae6;
-    text-align: center;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: Manrope;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 115.1%;
-    margin-top: 15px;
+  .job-title {
+    font-size: 16px;
   }
 
-  .box-1-p2 {
-    color: #d9d9d9;
-    text-align: center;
-    font-family: Manrope;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 115.1%;
+  .job-company {
+    font-size: 14px;
   }
 }

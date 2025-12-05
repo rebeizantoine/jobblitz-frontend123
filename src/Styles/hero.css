@@ -38,6 +38,7 @@ body {
 }
 .main {
   display: flex;
+  margin-left: 10%;
 }
 .headerfeature {
   background: linear-gradient(96deg, #0c09aa 2.04%, #3c39d4 88.4%);

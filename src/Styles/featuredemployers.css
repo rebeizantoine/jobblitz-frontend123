@@ -1,177 +1,92 @@
-.headerfeature1 {
-  display: flex;
-}
-
-.headerfeature1 h2 {
-  color: #fff;
-  font-family: Manrope;
-  font-size: 60px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 115.1%; /* 69.06px */
-  min-width: 650px;
-  height: 69px;
-  text-decoration: none;
-}
-.headerfeature1 {
-  background: linear-gradient(96deg, #0c09aa 2.04%, #3c39d4 88.4%);
-  height: 115px;
-}
-.featured {
-}
-.viewall1 {
-  margin-left: 150px;
-  margin-top: 25px;
-}
-.viewall1 a {
-  font-size: 60px;
-  margin-left: 50px;
-}
-.featured-employers {
-  margin-left: 90px;
-  margin-top: 25px;
-  width: 805px;
-  height: 89px;
-}
-.headerfeature1 a {
-  text-decoration: none;
-}
-.big-box-22 {
-  display: grid;
-  grid-template-columns: repeat(
-    3,
-    minmax(0, 1fr)
-  ); /* Two columns with equal width */
-  grid-gap: 20px; /* Adjust the gap between the boxes as needed */
-  margin: 0 auto; /* Center the container on the page */
+/* MAIN SECTION */
+.featured-section {
+  width: 100%;
   margin-top: 20px;
 }
 
-.box-22 {
-  width: 300px; /* Each box takes up the full width of its container */
-  max-width: 500px; /* Set the maximum width for each box */
-  margin: 0 auto; /* Center the box within its container */
-  height: 180px;
-  border: 3px solid #0c09aa;
-  background: #fff;
-  padding: 20px; /* Add padding for better visual appearance */
+/* HEADER */
+.header-feature {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(96deg, #0c09aa, #3c39d4);
+  padding: 25px 80px;
 }
 
-.box-22-p1 {
-  color: #356ae6;
-  text-align: center;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+.header-feature h2 {
+  color: #fff;
   font-family: Manrope;
-  font-size: 25px;
-  font-style: normal;
+  font-size: 48px;
   font-weight: 600;
-  line-height: 115.1%; /* 28.775px */
 }
 
-.box-22-p2 {
-  color: #d9d9d9;
-  text-align: center;
+.view-all {
+  color: #fff;
   font-family: Manrope;
-  font-size: 25px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 115.1%; /* 28.775px */
+  font-size: 32px;
+  font-weight: 600;
+  text-decoration: none;
 }
 
-.box-22 img {
-  max-width: 300px;
-  height: 140px;
+/* GRID */
+.grid-employers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 25px 80px;
 }
-@media only screen and (max-width: 768px) {
-  .headerfeature1 {
-    display: flex;
-    height: 60px !important;
+
+/* CARD */
+.emp-card {
+  background: #fff;
+  border: 3px solid #0c09aa;
+  padding: 20px;
+  height: 180px;
+  text-align: center;
+}
+
+.emp-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+}
+
+.emp-name {
+  margin-top: 10px;
+  color: #356ae6;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .header-feature {
+    padding: 15px 20px;
   }
 
-  .headerfeature1 h2 {
-    color: #fff;
-    font-family: Manrope;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 115.1%;
-    max-width: 330px;
-    height: 29px;
-    text-decoration: none;
-  }
-  .headerfeature1 {
-    background: linear-gradient(96deg, #0c09aa 2.04%, #3c39d4 88.4%);
-    height: 115px;
-  }
-  .featured {
-  }
-  .viewall1 {
-    margin-left: -480px;
-    margin-top: 20px;
-    width: 100px !important;
-    min-width: 20px;
-  }
-  .viewall1 a {
-    margin-left: 00px;
-    margin-top: 25px;
-    height: 20px;
-    width: 100px !important;
+  .header-feature h2 {
     font-size: 20px;
   }
-  .viewall1 h2 {
-    margin-left: 20px;
-  }
-  .featured-employers {
-    margin-left: -200px;
-    margin-top: 25px;
-  }
-  .headerfeature1 a {
-    text-decoration: none;
-  }
-  .big-box-22 {
-    display: grid;
-    grid-template-columns: repeat(
-      3,
-      minmax(0, 1fr)
-    ); /* Two columns with equal width */
-    grid-gap: 20px; /* Adjust the gap between the boxes as needed */
-    margin: 0 auto; /* Center the container on the page */
-    margin-top: 20px;
+
+  .view-all {
+    font-size: 18px;
   }
 
-  .box-22 {
-    /* Each box takes up the full width of its container */
-    max-width: 80px; /* Set the maximum width for each box */
-    margin: 0 auto; /* Center the box within its container */
-    height: 140px;
-    border: 3px solid #0c09aa;
-    background: #fff;
-    padding: 20px; /* Add padding for better visual appearance */
+  .grid-employers {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
   }
 
-  .box-22-p1 {
-    color: #356ae6;
-    text-align: center;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: Manrope;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 115.1%; /* 28.775px */
+  .emp-card {
+    height: auto;
+    padding: 10px;
   }
 
-  .box-22-p2 {
-    color: #d9d9d9;
-    text-align: center;
-    font-family: Manrope;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 115.1%; /* 28.775px */
-  }
-
-  .box-22 img {
-    max-width: 80px;
+  .emp-card img {
     height: 80px;
+  }
+
+  .emp-name {
+    font-size: 16px;
   }
 }

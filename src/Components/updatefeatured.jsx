@@ -15,147 +15,173 @@ const UpdateFeatured = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [newEmployerName, setNewEmployerName] = useState("");
   const [newEmployerImage, setNewEmployerImage] = useState(null);
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImagePreview, setSelectedImagePreview] = useState(null);
 
+  // ---------------------------------------------------------
+  // Load all featured employers
+  // ---------------------------------------------------------
   useEffect(() => {
-    const fetchFeaturedEmployers = async () => {
-      try {
-        const response = await axios.get(
-          "https://allinone-14n7.onrender.com/featuredemployer"
-        );
-        setFeaturedEmployers(response.data);
-      } catch (error) {
-        console.error("Error fetching featured employers:", error);
-      }
-    };
-
     fetchFeaturedEmployers();
   }, []);
 
-  const handleEmployers = (e) => {
-    e.preventDefault();
-    navigate("/employerdash");
+  const fetchFeaturedEmployers = async () => {
+    try {
+      const response = await axios.get(
+        "https://allinone-14n7.onrender.com/featuredemployer"
+      );
+      setFeaturedEmployers(response.data);
+    } catch (error) {
+      console.error("Error fetching featured employers:", error);
+    }
   };
 
-  const handleJobSeek = (e) => {
-    e.preventDefault();
-    navigate("/jobseekdash");
+  // ---------------------------------------------------------
+  // Navigation (sidebar)
+  // ---------------------------------------------------------
+  const handleLogout = () => {
+    localStorage.clear();
+    sessionStorage.clear();
+    navigate("/");
   };
 
-  const removeJob = (e) => {
-    e.preventDefault();
-    navigate("/removejob");
-  };
+  const goEmployers = () => navigate("/employerdash");
+  const goSeekers = () => navigate("/jobseekdash");
+  const goRemoveJob = () => navigate("/removejob");
+  const goUpdateTerms = () => navigate("/updateterms");
 
-  const updatefeatured = (e) => {
-    e.preventDefault();
-    navigate("/updatefeatured");
-  };
-  const updateterms = (e) => {
-    e.preventDefault();
-    navigate("/updateterms");
-  };
+  // ---------------------------------------------------------
+  // Open Update Modal
+  // ---------------------------------------------------------
   const openUpdateModal = (employer) => {
     setSelectedEmployer(employer);
-    setModalIsOpen(true);
     setNewEmployerName(employer.employerName);
-    // You can also set the current employerImage if you want to show it in the modal
+    setModalIsOpen(true);
   };
 
   const closeUpdateModal = () => {
-    setModalIsOpen(false);
     setSelectedEmployer(null);
+    setModalIsOpen(false);
     setNewEmployerName("");
     setNewEmployerImage(null);
+    setSelectedImagePreview(null);
   };
 
+  // ---------------------------------------------------------
+  // Update Employer
+  // ---------------------------------------------------------
   const updateFeatured = async () => {
     try {
-      // You can implement the logic to update the featured employer
-      // Send a request to your server to update the employerName and employerImage
-      // with the values in newEmployerName and newEmployerImage
-      // You may use formData to handle file uploads
       const formData = new FormData();
       formData.append("employerName", newEmployerName);
-      formData.append("employerImage", newEmployerImage);
+
+      if (newEmployerImage) {
+        formData.append("employerImage", newEmployerImage);
+      }
 
       await axios.put(
         `https://allinone-14n7.onrender.com/featuredemployer/updateFeaturedEmployer/${selectedEmployer._id}`,
         formData
       );
 
-      // Close the modal and fetch updated data
+      toast.success(`${newEmployerName} updated successfully`);
       closeUpdateModal();
-      const updatedResponse = await axios.get(
-        "https://allinone-14n7.onrender.com/featuredemployer"
-      );
-      setFeaturedEmployers(updatedResponse.data);
-      toast(`${newEmployerName} was updated successfully`);
+      fetchFeaturedEmployers();
     } catch (error) {
-      console.error("Error updating featured employer:", error);
-      toast.error("Error updating featured employer");
+      console.error("Error updating employer", error);
+      toast.error("Failed to update employer.");
     }
   };
+
+  // Handle choosing image
   const handleImageChange = (e) => {
     const file = e.target.files[0];
 
     if (file) {
+      setNewEmployerImage(file);
       const reader = new FileReader();
-      reader.onloadend = () => {
-        setSelectedImage(reader.result);
-      };
+      reader.onloadend = () => setSelectedImagePreview(reader.result);
       reader.readAsDataURL(file);
-    } else {
-      setSelectedImage(null);
     }
-
-    setNewEmployerImage(file);
   };
-  const handleLogout = () => {
-    // Clear local storage and navigate to the home route
-    localStorage.clear();
-    sessionStorage.clear();
-    navigate("/");
+
+  // ---------------------------------------------------------
+  // Delete Employer
+  // ---------------------------------------------------------
+  const deleteFeaturedEmployer = async (id) => {
+    if (!window.confirm("Are you sure you want to remove this employer?"))
+      return;
+
+    try {
+      await axios.delete(
+        `https://allinone-14n7.onrender.com/featuredemployer/deleteFeaturedEmployer/${id}`
+      );
+
+      toast.success("Employer removed successfully!");
+      fetchFeaturedEmployers();
+    } catch (error) {
+      console.error("Error deleting employer:", error);
+      toast.error("Failed to delete employer.");
+    }
   };
 
   return (
     <div>
+      <ToastContainer />
+
+      {/* ---------------------------------------------------------
+         Sidebar
+      --------------------------------------------------------- */}
       <div className="sidebar">
-        <a href="" className="sidebar-a" onClick={handleEmployers}>
+        <a className="sidebar-a" onClick={goEmployers}>
           View Employers
         </a>
-        <a href="" className="sidebar-a" onClick={removeJob}>
+
+        <a className="sidebar-a" onClick={goRemoveJob}>
           Remove Job
         </a>
-        <a href="" className="sidebar-a" onClick={handleJobSeek}>
+
+        <a className="sidebar-a" onClick={goSeekers}>
           View Seekers
         </a>
-        <a href="" className="sidebar-a" onClick={updatefeatured}>
-          Update Featured
+
+        <a className="sidebar-a">Update Featured</a>
+
+        <a className="sidebar-a" onClick={goUpdateTerms}>
+          Update Terms
         </a>
-        <a href="" className="sidebar-a" onClick={updateterms}>
-          Update terms
-        </a>
+
         <img
           className="logout-dash-image"
           src={logoutimage}
           onClick={handleLogout}
-          alt=""
+          alt="logout"
         />
       </div>
 
-      <div>
+      {/* ---------------------------------------------------------
+         Featured Employers List
+      --------------------------------------------------------- */}
+      <div className="featured-container">
         <h2>Featured Employers</h2>
-        <ToastContainer />
+
         {featuredEmployers.map((employer) => (
           <div key={employer._id} className="featured-employer">
             <img src={employer.employerImage} alt={employer.employerName} />
+
             <p>{employer.employerName}</p>
+
             <button onClick={() => openUpdateModal(employer)}>Update</button>
-            <button onClick={(e) => removeJob(e, employer._id)}>Remove</button>
+
+            <button onClick={() => deleteFeaturedEmployer(employer._id)}>
+              Remove
+            </button>
           </div>
         ))}
       </div>
+
+      {/* ---------------------------------------------------------
+         UPDATE MODAL
+      --------------------------------------------------------- */}
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeUpdateModal}
@@ -164,33 +190,33 @@ const UpdateFeatured = () => {
         ariaHideApp={false}
       >
         <h2>Update Employer</h2>
-        <form>
-          <label className="label-to-fix">
-            Employer Name:
-            <input
-              type="text"
-              value={newEmployerName}
-              onChange={(e) => setNewEmployerName(e.target.value)}
-            />
-          </label>
-          <label>
-            Employer Image:
-            <input type="file" onChange={handleImageChange} />
-          </label>
-          {selectedImage && (
-            <img
-              src={selectedImage}
-              alt="Selected"
-              className="selected-image"
-            />
-          )}
-          <button type="button" onClick={updateFeatured}>
-            Update
-          </button>
-          <button type="button" onClick={closeUpdateModal}>
-            Cancel
-          </button>
-        </form>
+
+        <label className="label-to-fix">
+          Employer Name:
+          <input
+            type="text"
+            value={newEmployerName}
+            onChange={(e) => setNewEmployerName(e.target.value)}
+          />
+        </label>
+
+        <label>
+          Employer Image:
+          <input type="file" onChange={handleImageChange} />
+        </label>
+
+        {selectedImagePreview && (
+          <img
+            src={selectedImagePreview}
+            alt="Preview"
+            className="selected-image"
+          />
+        )}
+
+        <div className="modal-buttons">
+          <button onClick={updateFeatured}>Update</button>
+          <button onClick={closeUpdateModal}>Cancel</button>
+        </div>
       </Modal>
     </div>
   );

@@ -6,33 +6,34 @@ const Featuredemployers = () => {
   const [featuredEmployers, setFeaturedEmployers] = useState([]);
 
   useEffect(() => {
-    const fetchFeaturedEmployers = async () => {
+    const fetchFeatured = async () => {
       try {
-        const response = await axios.get(
+        const res = await axios.get(
           "https://allinone-14n7.onrender.com/featuredemployer/"
         );
-        setFeaturedEmployers(response.data);
-      } catch (error) {
-        console.error("Error fetching featured employers:", error);
+        setFeaturedEmployers(res.data);
+      } catch (err) {
+        console.error("Error fetching featured employers:", err);
       }
     };
 
-    fetchFeaturedEmployers();
-  }, []); // Empty dependency array means this effect runs once when the component mounts
+    fetchFeatured();
+  }, []);
 
   return (
-    <div className="featured">
-      <div className="headerfeature1">
-        <h2 className="featured-employers">Featured Employers</h2>
-        <h2 className="viewall1">
-          <a href="/category">View All</a>
-        </h2>
+    <div className="featured-section">
+      <div className="header-feature">
+        <h2>Featured Employers</h2>
+        <a href="/category" className="view-all">
+          View All
+        </a>
       </div>
-      <div className="big-box-22">
-        {featuredEmployers.map((employer) => (
-          <div key={employer._id} className="box-22">
-            <img src={employer.employerImage} alt={employer.employerName} />
-            <p className="box-22-p1">{employer.employerName}</p>
+
+      <div className="grid-employers">
+        {featuredEmployers.map((emp) => (
+          <div key={emp._id} className="emp-card">
+            <img src={emp.employerImage} alt={emp.employerName} />
+            <p className="emp-name">{emp.employerName}</p>
           </div>
         ))}
       </div>

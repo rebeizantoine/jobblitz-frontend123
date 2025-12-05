@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-
 import "../Styles/featuredjobs.css";
 
 const Featuredjobs = () => {
@@ -9,43 +8,42 @@ const Featuredjobs = () => {
   const [jobs, setJobs] = useState([]);
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchJobs = async () => {
       try {
-        const response = await axios.get(
+        const res = await axios.get(
           "https://allinone-14n7.onrender.com/jobdescriptions/getAll"
         );
-        setJobs(response.data.slice(0, 6));
-      } catch (error) {
-        console.error("Error fetching data:", error);
+        setJobs(res.data.slice(0, 6));
+      } catch (err) {
+        console.error("Error fetching jobs:", err);
       }
     };
 
-    fetchData();
+    fetchJobs();
   }, []);
 
-  const handleJobClick = (jobId) => {
-    navigate(`/singlejobdescription/jobdescription/${jobId}`);
-  };
-
   return (
-    <div className="featured">
-      <div className="headerfeature">
-        <h2 className="featured-jobs">Featured Jobs</h2>
-        <h2 className="viewall">
-          <a href="/category">View All</a>
-        </h2>
+    <div className="featured-section">
+      <div className="header-feature">
+        <h2>Featured Jobs</h2>
+        <a href="/category" className="view-all">
+          View All
+        </a>
       </div>
-      <div className="big-box-1">
+
+      <div className="grid-jobs">
         {jobs.map((job) => (
           <div
             key={job._id}
-            className="box-1"
-            onClick={() => handleJobClick(job._id)}
+            className="job-card"
+            onClick={() =>
+              navigate(`/singlejobdescription/jobdescription/${job._id}`)
+            }
           >
-            <p className="box-1-p1">
+            <p className="job-title">
               {job.jobtitle} - {job.location}
             </p>
-            <p className="box-1-p2">{job.companyname}</p>
+            <p className="job-company">{job.companyname}</p>
           </div>
         ))}
       </div>
